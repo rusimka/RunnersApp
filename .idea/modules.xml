@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RunnersApp.iml" filepath="$PROJECT_DIR$/.idea/RunnersApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runners-frontend/runners-frontend.iml" filepath="$PROJECT_DIR$/runners-frontend/runners-frontend.iml" />
     </modules>
   </component>
 </project>
