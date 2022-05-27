@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RunnersApp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/BackendAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/BackendAppApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +37,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652169311705</updated>
-      <workItem from="1652169316204" duration="2110000" />
+      <workItem from="1652169316204" duration="3355000" />
     </task>
     <servers />
   </component>
