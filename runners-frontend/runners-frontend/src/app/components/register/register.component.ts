@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     const {username, email, password} = this.form;
     this.authService.register(username, email, password).subscribe(
       data => {
-        console.log(data); //this is the http request
+        console.log(data); // here the data is message 'User Register Successfull' because the Auth Controller on backend return response entity with message user registered succesffuly
         this.isSuccessful = true;
         this.isSignUpFailed = false;
     },
