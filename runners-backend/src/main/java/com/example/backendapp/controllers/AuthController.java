@@ -74,19 +74,26 @@ public class AuthController {
                 roles));
     }
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+
+    @PostMapping("/checkIfUserExist")
+    public ResponseEntity<?> checkIfUserExistByUsernameOrEmail(@Valid @RequestBody SignupRequest signupRequest) {
+        if (userRepository.existsByUsername(signupRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Username is already taken!"));
         }
 
-        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+        if (userRepository.existsByEmail(signupRequest.getEmail())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Email is already in use!"));
         }
+        return ResponseEntity.ok(new MessageResponse("You can register user successfully!"));
+
+    }
+    @PostMapping("/signup")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+
 
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),

@@ -17,8 +17,10 @@ export class RegisterComponent implements OnInit {
   }
 
   isSuccessful = false;
-  isSignUpFailed = false;
   errorMessage = '';
+  userCanRegisterMessage = '';
+  registerButtonDisabled = true;
+  isExistingUser = false;
 
 
   constructor(private authService: AuthService) { }
@@ -32,16 +34,30 @@ export class RegisterComponent implements OnInit {
   * */
   onSubmit(): void {
     const {username, email, password} = this.form;
+    this.authService.checkIfUserExists(username, email, password).subscribe(
+      data => {
+        console.log(data); // here the data is message 'User Register Successfull' because the Auth Controller on backend return response entity with message user registered succesffuly
+        this.registerButtonDisabled = false; // button for register to be enabled
+        this.userCanRegisterMessage = data.message; // The data from backend
+        this.isExistingUser = false; // user don't exist in database and if it false to show the message that the user can registed successfull
+    },
+      error => {
+        this.errorMessage = error.error.message;
+        this.isExistingUser = true; // if the user exist it should show the message that there is already user with existing email or username
+        this.registerButtonDisabled = true;
+    });
+  }
+
+  register(): void {
+    const {username, email, password} = this.form;
     this.authService.register(username, email, password).subscribe(
       data => {
         console.log(data); // here the data is message 'User Register Successfull' because the Auth Controller on backend return response entity with message user registered succesffuly
         this.isSuccessful = true;
-        this.isSignUpFailed = false;
-    },
+      },
       error => {
         this.errorMessage = error.error.message;
-        this.isSignUpFailed = true;
-    });
+      });
   }
 
 }

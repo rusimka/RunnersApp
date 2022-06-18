@@ -73,10 +73,17 @@
       </div>
 
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+        <button class="btn btn-primary btn-block">Check if the user already exists in the system</button>
       </div>
-      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+      <div class="alert alert-warning" *ngIf="f.submitted && isExistingUser">
         Signup failed!<br />{{ errorMessage }}
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" [disabled]="registerButtonDisabled" (click)="register()">Register</button>
+      </div>
+      <div class="alert alert-success" *ngIf="f.submitted && !isExistingUser">
+        {{userCanRegisterMessage}}
       </div>
     </form>
     <div class="alert alert-success" *ngIf="isSuccessful">

@@ -32,5 +32,11 @@ export class AuthService {
       httpOptions);
   }
 
+  checkIfUserExists(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(API_AUTH + 'checkIfUserExist', {
+        username, email, password},
+      httpOptions);
+  }
+
 
 }
