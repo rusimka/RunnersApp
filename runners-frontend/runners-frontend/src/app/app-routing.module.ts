@@ -7,6 +7,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {BoardUserComponent} from "./components/board-user/board-user.component";
 import {BoardModeratorComponent} from "./components/board-moderator/board-moderator.component";
 import {BoardAdminComponent} from "./components/board-admin/board-admin.component";
+import {AddModeratorComponent} from "./components/add-moderator/add-moderator.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'} // this will redirect to home component
+  { path: '', redirectTo: 'home', pathMatch: 'full'}, // this will redirect to home component
+  { path : 'add-moderator', component: AddModeratorComponent }
 ];
 
 @NgModule({

@@ -46,13 +46,16 @@ public class User {
 
     private Set<Role> roles = new HashSet<>();
 
+    private boolean isModerator; // this is important because we are adding role_moderator to some users
+
     public User(){}
 
-    public User(Long userId, String username, String email, String password) {
+    public User(Long userId, String username, String email, String password, boolean isModerator) {
         this.userId = userId;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.isModerator = isModerator;
     }
 
     public User(String username, String email, String password) {
@@ -96,7 +99,16 @@ public class User {
     public Set<Role> getRoles() {
         return roles;
     }
+
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public boolean isModerator() {
+        return isModerator;
+    }
+
+    public void setModerator(boolean moderator) {
+        isModerator = moderator;
     }
 }

@@ -4,6 +4,8 @@ import {Observable} from "rxjs";
 
 
 const API_URL = 'http://localhost:8081/api/test/';
+const USERS_API_URL = 'http://localhost:8081/users';
+const UPDATE_USER_ROLE_API_URL = "http://localhost:8081/add-role-to-user"
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +27,14 @@ export class UserService {
 
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin', {responseType: 'text'});
+  }
+
+  getAllUsers(): Observable<any> {
+    return this.http.get(`${USERS_API_URL}`);
+  }
+
+  addModeratorRoleToUser(userId: number): Observable<any> {
+    return this.http.put(`${UPDATE_USER_ROLE_API_URL}/${userId}`, userId);
   }
 
 }
