@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/user-service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/user-service/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InternProject/Armedia-MK-2021-Spring-Internship-Project-rusimka-dineva-E-commerce/E-commerce" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -67,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652169311705</updated>
       <workItem from="1652169316204" duration="125251000" />
-      <workItem from="1657464480079" duration="14557000" />
+      <workItem from="1657464480079" duration="15242000" />
+      <workItem from="1658693813597" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="authentication and authorization on front-end added">
       <created>1655335980441</created>
