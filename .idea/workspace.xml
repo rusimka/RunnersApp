@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
