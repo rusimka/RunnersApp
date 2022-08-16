@@ -8,5 +8,6 @@ import java.sql.SQLException;
 
 public interface EventService {
 
-    Event saveEvent(Event event,MultipartFile eventPhoto) throws IOException, SQLException;
+    Event saveEvent(Event event);
+
 }

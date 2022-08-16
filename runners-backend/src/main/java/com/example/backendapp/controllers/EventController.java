@@ -3,16 +3,18 @@ package com.example.backendapp.controllers;
 import com.example.backendapp.models.Event;
 import com.example.backendapp.payload.response.MessageResponse;
 import com.example.backendapp.services.EventService;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static org.springframework.http.MediaType.*;
+import static org.springframework.http.MediaType.MULTIPART_FORM_DATA;
+
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class EventController {
 
     private final EventService eventService;
@@ -21,10 +23,14 @@ public class EventController {
         this.eventService = eventService;
     }
 
-    @PostMapping(value = "/add-event",consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<?> addEvent(@ModelAttribute Event event, @RequestParam(value = "eventPhoto", required = false) MultipartFile eventPhoto) throws IOException, SQLException {
-        this.eventService.saveEvent(event,eventPhoto);
+    @PostMapping(value = "/add-event",consumes = APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> addEvent(@RequestBody Event event) throws IOException, SQLException {
+        this.eventService.saveEvent(event);
         return ResponseEntity.ok(new MessageResponse("Event successfully added!"));
     }
+
+
+
+
 
 }

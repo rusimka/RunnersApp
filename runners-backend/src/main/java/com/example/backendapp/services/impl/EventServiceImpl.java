@@ -26,14 +26,10 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public Event saveEvent(Event event,MultipartFile eventPhoto) throws IOException, SQLException {
+    public Event saveEvent(Event event)  {
         Event newEvent = new Event();
         newEvent.setEventName(event.getEventName());
-        String folderWithPhotos = "C:\\Users\\Rusinka\\Desktop\\RunnersApp\\runners-backend\\src\\main\\resources\\images\\";
-        byte[] bytes = eventPhoto.getBytes();
-        Path path = Paths.get(folderWithPhotos + eventPhoto.getOriginalFilename());
-        Files.write(path,bytes);
-        newEvent.setEventPhotoName(eventPhoto.getOriginalFilename());
+        newEvent.setEventPhotoName(event.getEventPhotoName());
         newEvent.setEventDescription(event.getEventDescription());
         newEvent.setEventCity(event.getEventCity());
         newEvent.setEventCountry(event.getEventCountry());
@@ -41,5 +37,6 @@ public class EventServiceImpl implements EventService {
         newEvent.setEventRegistrationLink(event.getEventRegistrationLink());
         return eventRepository.save(newEvent);
     }
+
 
 }

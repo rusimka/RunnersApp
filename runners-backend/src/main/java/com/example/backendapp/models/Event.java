@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.nio.file.Path;
 import java.sql.Blob;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Event {
     private Long eventId;
 
     @Column(name = "event_name")
+    @NotNull
     private String eventName;
 
     @Column(name = "event_photo_name")
@@ -31,16 +33,33 @@ public class Event {
     private String eventDescription;
 
     @Column(name = "event_city")
+    @NotNull
     private String eventCity;
 
     @Column(name = "event_country")
+    @NotNull
     private String eventCountry;
 
     @Column(name = "event_date")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "MM-dd-yyyy")
+    @NotNull
     private Date eventDate;
 
     @Column(name = "event_registration_link")
+    @NotNull
     private String eventRegistrationLink;
 
+
+    public Event(){}
+
+    public Event(String eventName, String eventPhotoName, String eventDescription, String eventCity, String eventCountry, Date eventDate, String eventRegistrationLink) {
+        this.eventName = eventName;
+        this.eventPhotoName = eventPhotoName;
+        this.eventDescription = eventDescription;
+        this.eventCity = eventCity;
+        this.eventCountry = eventCountry;
+        this.eventDate = eventDate;
+        this.eventRegistrationLink = eventRegistrationLink;
+    }
 }

@@ -15,8 +15,6 @@ export class AddModeratorComponent implements OnInit {
 
   displayedColumns: string[] = ['userId', 'username', 'email', 'actions'];
 
-
-
   users: User[] = []; // the data is not from type Observable because with Observable we cannot add it,
 
   successMessage!: string;

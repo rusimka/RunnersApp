@@ -1,0 +1,20 @@
+1. Add event form
+    1.2. save photo to firebase storage -- DONE
+    1.3 add validation messages -- DONE
+    1.4 notify users via email when event is added
+
+2. Get events
+
+3. Search by date picker
+
+4. Search by city
+
+5. Edit event
+
+6. Delete event
+
+7. Send email to user when the user has role-moderator
+
+8. Navigation bar
+
+9. Secure the endpoints by user roles

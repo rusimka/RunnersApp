@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="">
+    <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="authentication and authorization on front-end added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/models/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/services/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/services/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/services/impl/EventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/services/impl/EventServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/add-moderator/add-moderator.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/add-moderator/add-moderator.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -48,6 +58,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Rusinka\Desktop\RunnersApp\runners-frontend\runners-frontend\node_modules\typescript\lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rusinka\Desktop\RunnersApp\runners-frontend\runners-frontend\src\app\components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +73,9 @@
       <updated>1652169311705</updated>
       <workItem from="1652169316204" duration="125251000" />
       <workItem from="1657464480079" duration="15242000" />
-      <workItem from="1658693813597" duration="1944000" />
+      <workItem from="1658693813597" duration="29914000" />
+      <workItem from="1659434280790" duration="37887000" />
+      <workItem from="1660595320113" duration="8347000" />
     </task>
     <task id="LOCAL-00001" summary="authentication and authorization on front-end added">
       <created>1655335980441</created>
