@@ -61,6 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/roles").permitAll()
                 .antMatchers("/add-role-to-user/**").permitAll()
                 .antMatchers("/add-event").permitAll()
+                .antMatchers("/events").permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }

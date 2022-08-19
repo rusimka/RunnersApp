@@ -15,6 +15,7 @@ import java.nio.file.Paths;
 import java.sql.Blob;
 import java.sql.SQLException;
 import java.util.Base64;
+import java.util.List;
 
 @Service
 public class EventServiceImpl implements EventService {
@@ -29,13 +30,18 @@ public class EventServiceImpl implements EventService {
     public Event saveEvent(Event event)  {
         Event newEvent = new Event();
         newEvent.setEventName(event.getEventName());
-        newEvent.setEventPhotoName(event.getEventPhotoName());
+        newEvent.setEventPhotoUrl(event.getEventPhotoUrl());
         newEvent.setEventDescription(event.getEventDescription());
         newEvent.setEventCity(event.getEventCity());
         newEvent.setEventCountry(event.getEventCountry());
         newEvent.setEventDate(event.getEventDate());
         newEvent.setEventRegistrationLink(event.getEventRegistrationLink());
         return eventRepository.save(newEvent);
+    }
+
+    @Override
+    public List<Event> getAllEvents() {
+        return this.eventRepository.findAll();
     }
 
 

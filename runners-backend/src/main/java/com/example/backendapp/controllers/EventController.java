@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import static org.springframework.http.MediaType.*;
 import static org.springframework.http.MediaType.MULTIPART_FORM_DATA;
@@ -23,14 +24,14 @@ public class EventController {
         this.eventService = eventService;
     }
 
-    @PostMapping(value = "/add-event",consumes = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/add-event", consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<?> addEvent(@RequestBody Event event) throws IOException, SQLException {
         this.eventService.saveEvent(event);
         return ResponseEntity.ok(new MessageResponse("Event successfully added!"));
     }
 
-
-
-
-
+    @GetMapping("/events")
+    public List<Event> getAllEvents() {
+        return this.eventService.getAllEvents();
+    }
 }

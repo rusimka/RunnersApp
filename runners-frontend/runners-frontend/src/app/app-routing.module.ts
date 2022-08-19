@@ -10,6 +10,7 @@ import {BoardAdminComponent} from "./components/board-admin/board-admin.componen
 import {AddModeratorComponent} from "./components/add-moderator/add-moderator.component";
 import {AddEventComponent} from "./components/add-event/add-event.component";
 import {UploadPhotoComponent} from "./components/upload-photo/upload-photo.component";
+import {EventListComponent} from "./components/event-list/event-list.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'}, // this will redirect to home component
   { path : 'add-moderator', component: AddModeratorComponent },
   { path: 'add-event', component: AddEventComponent },
-  { path : 'upload-photo', component: UploadPhotoComponent }
+  { path : 'upload-photo', component: UploadPhotoComponent },
+  { path: 'events', component: EventListComponent}
 
 ];
 

@@ -3,7 +3,7 @@
     1.3 add validation messages -- DONE
     1.4 notify users via email when event is added
 
-2. Get events
+2. Get events -- IN PROGRESS
 
 3. Search by date picker
 
@@ -18,3 +18,8 @@
 8. Navigation bar
 
 9. Secure the endpoints by user roles
+
+** Onoj user moderator koj sto ke dodade svoj event da ima opcija isto taka da go menuva eventot
+** fakticki da se cuvat MyEvents eventi koi sto gi dodava moderatorot i tie da imaat opcija da se menuvaat
+
+** opcija translate

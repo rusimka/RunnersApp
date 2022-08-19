@@ -26,8 +26,9 @@ public class Event {
     @NotNull
     private String eventName;
 
-    @Column(name = "event_photo_name")
-    private String eventPhotoName;
+    @Column(name = "event_photo_url")
+    @NotNull
+    private String eventPhotoUrl;
 
     @Column(name = "event_description")
     private String eventDescription;
@@ -53,9 +54,9 @@ public class Event {
 
     public Event(){}
 
-    public Event(String eventName, String eventPhotoName, String eventDescription, String eventCity, String eventCountry, Date eventDate, String eventRegistrationLink) {
+    public Event(String eventName, String eventPhotoUrl, String eventDescription, String eventCity, String eventCountry, Date eventDate, String eventRegistrationLink) {
         this.eventName = eventName;
-        this.eventPhotoName = eventPhotoName;
+        this.eventPhotoUrl = eventPhotoUrl;
         this.eventDescription = eventDescription;
         this.eventCity = eventCity;
         this.eventCountry = eventCountry;

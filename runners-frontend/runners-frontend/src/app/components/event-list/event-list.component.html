@@ -1,0 +1,25 @@
+<div class="threeGrid">
+
+
+  <div *ngFor="let event of events">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{event.eventName}}</mat-card-title>
+<!--        <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      </mat-card-header>
+      <img mat-card-image src="{{event.eventPhotoUrl}}" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>Event city: <b>{{event.eventCity}}</b></p>
+        <p>Event country: <b>{{event.eventCity}}</b></p>
+        <p>Event date: <b>{{event.eventDate}}</b></p>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+
+
+
+</div>
+

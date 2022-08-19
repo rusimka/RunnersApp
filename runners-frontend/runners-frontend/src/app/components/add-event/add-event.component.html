@@ -20,10 +20,14 @@
     <div class="form-group example-container">
         <label>Add event photo</label>
         <input type="file" class=form-control
-               id="eventPhotoName"
-               name="eventPhotoName"
-               [(ngModel)]="event.eventPhotoName"
-               (change)="onFileChange($event)" placeholder="Enter event photo here" >
+               id="eventPhotoUrl"
+               name="eventPhotoUrl"
+               [(ngModel)]="event.eventPhotoUrl"
+               #eventPhotoUrl="ngModel"
+               (change)="onFileChange($event)" placeholder="Enter event photo here"
+               required>
+      <mat-error *ngIf="eventPhotoUrl.errors?.['required']">Event photo is required</mat-error>
+
     </div>
 
     <div class="form-group example-container">

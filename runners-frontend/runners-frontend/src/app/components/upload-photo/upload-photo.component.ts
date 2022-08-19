@@ -9,33 +9,27 @@ import {EventService} from "../../services/event-service/event.service";
 })
 export class UploadPhotoComponent implements OnInit {
 
-
-  uploadForm! : FormGroup;
-
-  constructor(private formBuilder: FormBuilder, private eventService: EventService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.uploadForm = this.formBuilder.group({
-      profile: ['']
-    });
+    this.funckija1()
+  }
+
+  async funckija1() {
+    console.log("Function 1 entered: " )
+    await this.funkcija2("rusimka");
+
+    console.log("function 1 done");
   }
 
 
-  onFileSelect(event: any) {
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      // @ts-ignore
-      this.uploadForm.get('profile').setValue(file);
-    }
-  }
+   async funkcija2(rusimka: string) {
+    console.log("function 2 entered");
+     for (let i = 0; i < rusimka.length; i++) {
+       console.log(rusimka[i]);
+       console.log("\n");
+     }
+     console.log("function 2 done");
 
-  onSubmit() {
-    const formData = new FormData();
-    // @ts-ignore
-    formData.append('file', this.uploadForm.get('profile').value);
-    // this.eventService.uploadEventPhoto(formData).subscribe(data => {
-    //   console.log(data);
-    // });
   }
-
 }

@@ -3,7 +3,7 @@ export class Event {
 
   eventId! : number;
   eventName! : string;
-  eventPhotoName! : string;
+  eventPhotoUrl! : string;
   eventDescription! : string;
   eventCity! : string;
   eventCountry!: string;

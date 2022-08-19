@@ -27,6 +27,8 @@ import { UploadPhotoComponent } from './components/upload-photo/upload-photo.com
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
+import { EventListComponent } from './components/event-list/event-list.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import {environment} from "../environments/environment";
     BoardUserComponent,
     AddModeratorComponent,
     AddEventComponent,
-    UploadPhotoComponent
+    UploadPhotoComponent,
+    EventListComponent
   ],
     imports: [
         BrowserModule,
@@ -58,7 +61,8 @@ import {environment} from "../environments/environment";
         MatDatepickerModule,
         MatNativeDateModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireStorageModule
+        AngularFireStorageModule,
+        MatCardModule
 
     ],
   providers: [authInterceptorProviders],
