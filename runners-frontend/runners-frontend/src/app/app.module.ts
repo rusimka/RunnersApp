@@ -29,6 +29,8 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import { EventListComponent } from './components/event-list/event-list.component';
 import {MatCardModule} from "@angular/material/card";
+import { UpdateEventComponent } from './components/update-event/update-event.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import {MatCardModule} from "@angular/material/card";
     AddModeratorComponent,
     AddEventComponent,
     UploadPhotoComponent,
-    EventListComponent
+    EventListComponent,
+    UpdateEventComponent
   ],
     imports: [
         BrowserModule,
@@ -62,7 +65,8 @@ import {MatCardModule} from "@angular/material/card";
         MatNativeDateModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFireStorageModule,
-        MatCardModule
+        MatCardModule,
+        MatCheckboxModule
 
     ],
   providers: [authInterceptorProviders],

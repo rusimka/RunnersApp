@@ -11,6 +11,7 @@ import {AddModeratorComponent} from "./components/add-moderator/add-moderator.co
 import {AddEventComponent} from "./components/add-event/add-event.component";
 import {UploadPhotoComponent} from "./components/upload-photo/upload-photo.component";
 import {EventListComponent} from "./components/event-list/event-list.component";
+import {UpdateEventComponent} from "./components/update-event/update-event.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,8 +25,8 @@ const routes: Routes = [
   { path : 'add-moderator', component: AddModeratorComponent },
   { path: 'add-event', component: AddEventComponent },
   { path : 'upload-photo', component: UploadPhotoComponent },
-  { path: 'events', component: EventListComponent}
-
+  { path: 'events', component: EventListComponent},
+  { path: 'update-event/:eventId', component: UpdateEventComponent}
 ];
 
 @NgModule({

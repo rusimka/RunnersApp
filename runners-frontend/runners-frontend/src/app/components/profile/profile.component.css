@@ -1,0 +1,14 @@
+.example-card {
+  max-width: 350px;
+}
+
+
+.threeGrid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+}
+
+.buttons {
+  margin-right: 20px;
+}

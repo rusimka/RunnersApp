@@ -1,16 +1,20 @@
 package com.example.backendapp.services;
 
 import com.example.backendapp.models.Event;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 public interface EventService {
 
     Event saveEvent(Event event);
 
     List<Event> getAllEvents();
+
+    List<Event> getEventsByUserId(Long userId);
+
+    Optional<Event> getEventById(Long eventId);
+
+    Event updateEvent(Long eventId, Event event);
 
 }

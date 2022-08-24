@@ -7,6 +7,7 @@ import {AngularFireStorage, AngularFireUploadTask} from "@angular/fire/compat/st
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {UploadTaskSnapshot} from "@angular/fire/compat/storage/interfaces";
 import {finalize, Observable} from "rxjs";
+import {TokenStorageService} from "../../services/token-storage/token-storage.service";
 
 
 @Component({
@@ -22,16 +23,22 @@ export class AddEventComponent implements OnInit {
   successMessage!: string;
   downloadURL! : Observable<String>
   firebaseUrl! : string;
+  currentUser: any;
 
   // @ts-ignore
   @ViewChild('eventForm') eventForm: NgForm; // here we are getting the reference eventForm in  ts file
+  // also try the code without this and see what's going to happen ??
 
 
   constructor(private eventService: EventService,
               private angularFireStorage : AngularFireStorage,
-              private snackBar: MatSnackBar) { }
+              private snackBar: MatSnackBar,
+              private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.tokenStorageService.getUser();
+    this.event.userId = this.currentUser.id;
+    console.log(this.event.userId);
 
   }
 
@@ -40,13 +47,12 @@ export class AddEventComponent implements OnInit {
     this.eventPhotoName = file.target.files[0].name;
     this.photo = file.target.files[0];
     this.uploadImageToFirebase(this.photo); // first we are saving the image in firebase, this is working probably fine
-
   }
 
    saveEvent() {
     console.log(this.firebaseUrl);
-    this.event.eventPhotoUrl = this.firebaseUrl;
-    this.eventService.addEvent(this.event.eventName, this.firebaseUrl, this.event.eventDescription, this.event.eventCity, this.event.eventCountry, this.event.eventDate, this.event.eventRegistrationLink).subscribe(data => {
+    this.event.eventPhotoUrl = this.firebaseUrl; //  probaj bez firebase url , mozhe so eventphoto url
+    this.eventService.addEvent(this.event.eventName,  this.firebaseUrl, this.event.eventDescription, this.event.eventCity, this.event.eventCountry, this.event.eventDate, this.event.eventRegistrationLink, this.event.userId).subscribe(data => {
       this.successMessage = data.message;
       console.log(this.successMessage)
       this.openSnackBar(this.successMessage);

@@ -1,26 +1,25 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <header class="jumbotron">
-    <h3>
-      <strong>{{ currentUser.username }}</strong> Profile
-    </h3>
-  </header>
-  <p>
-    <strong>Token:</strong>
-    {{ currentUser.accessToken.substring(0, 20) }} ...
-    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-  </p>
-  <p>
-    <strong>Email:</strong>
-    {{ currentUser.email }}
-  </p>
-  <strong>Roles:</strong>
-  <ul>
-    <li *ngFor="let role of currentUser.roles">
-      {{ role }}
-    </li>
-  </ul>
+<div class="threeGrid">
+
+  <div *ngFor="let event of events">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{event.eventName}}</mat-card-title>
+        <mat-card-subtitle>{{event.eventName}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{event.eventPhotoUrl}}" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>Event city: <b>{{event.eventCity}}</b></p>
+        <p>Event country: <b>{{event.eventCity}}</b></p>
+        <p>Event date: <b>{{event.eventDate}}</b></p>
+      </mat-card-content>
+      <button mat-raised-button color="primary" class="buttons" (click)="updateEvent(event.eventId)">Edit</button>
+      <button mat-raised-button color="warn" class="buttons">Delete</button>
+
+
+    </mat-card>
+
+  </div>
+
 </div>
 
-<ng-template #loggedOut>
-  Please login.
-</ng-template>

@@ -4,7 +4,9 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -47,6 +49,7 @@ public class User {
     private Set<Role> roles = new HashSet<>();
 
     private boolean isModerator; // this is important because we are adding role_moderator to some users
+
 
     public User(){}
 
@@ -111,4 +114,6 @@ public class User {
     public void setModerator(boolean moderator) {
         isModerator = moderator;
     }
+
+
 }

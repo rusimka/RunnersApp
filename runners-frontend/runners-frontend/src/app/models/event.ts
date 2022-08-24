@@ -1,3 +1,4 @@
+import {User} from "./user";
 
 export class Event {
 
@@ -9,6 +10,8 @@ export class Event {
   eventCountry!: string;
   eventDate! : Date;
   eventRegistrationLink! : string;
+  userId!: number;
+
 
 
 }

@@ -26,6 +26,7 @@ public class Event {
     @NotNull
     private String eventName;
 
+
     @Column(name = "event_photo_url")
     @NotNull
     private String eventPhotoUrl;
@@ -51,10 +52,13 @@ public class Event {
     @NotNull
     private String eventRegistrationLink;
 
+    @Column(name = "user_id")
+    private Long userId;
+
 
     public Event(){}
 
-    public Event(String eventName, String eventPhotoUrl, String eventDescription, String eventCity, String eventCountry, Date eventDate, String eventRegistrationLink) {
+    public Event(String eventName,String eventPhotoUrl, String eventDescription, String eventCity, String eventCountry, Date eventDate, String eventRegistrationLink, Long userId) {
         this.eventName = eventName;
         this.eventPhotoUrl = eventPhotoUrl;
         this.eventDescription = eventDescription;
@@ -62,5 +66,6 @@ public class Event {
         this.eventCountry = eventCountry;
         this.eventDate = eventDate;
         this.eventRegistrationLink = eventRegistrationLink;
+        this.userId = userId;
     }
 }
