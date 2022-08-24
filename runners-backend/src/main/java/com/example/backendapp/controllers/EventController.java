@@ -50,4 +50,9 @@ public class EventController {
         this.eventService.updateEvent(eventId,event);
         return ResponseEntity.ok(new MessageResponse("Event successfully updated!"));
     }
+
+    @DeleteMapping("/delete-event/{eventId}")
+    public void deleteEvent(@PathVariable Long eventId) {
+        this.eventService.deleteEvent(eventId);
+    }
 }

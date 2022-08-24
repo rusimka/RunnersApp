@@ -37,4 +37,12 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(["update-event", eventId]);
 
   }
+
+  deleteEvent(eventId: number) {
+    this.eventService.deleteEvent(eventId).subscribe(data => {
+
+      this.ngOnInit();
+    })
+
+  }
 }

@@ -10,6 +10,7 @@ const ADD_EVENT_API_URL = "http://localhost:8081/add-event"
 const GET_ALL_EVENTS_API_URL = "http://localhost:8081/events"
 const GET_EVENT_BY_EVENT_ID_API_URL = "http://localhost:8081/getEvent"
 const UPDATE_EVENT_API_URL = "http://localhost:8081/update-event"
+const DELETE_EVENT_API_URL = "http://localhost:8081/delete-event"
 @Injectable({
   providedIn: 'root'
 })
@@ -47,5 +48,9 @@ export class EventService {
     return this.http.put(`${UPDATE_EVENT_API_URL}/${eventId}`,{eventId,eventName, eventDescription, eventCity, eventCountry, eventDate, eventRegistrationLink, userId})
 
 
+  }
+
+  deleteEvent(eventId: number) : Observable<any>  {
+    return this.http.delete(`${DELETE_EVENT_API_URL}/${eventId}`);
   }
 }
