@@ -66,6 +66,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/getEvent/{eventId}").permitAll()
                 .antMatchers("/update-event/{eventId}").permitAll()
                 .antMatchers("/delete-event/{eventId}").permitAll()
+                .antMatchers("/cities").permitAll()
+                .antMatchers("/getAllEventsForCity/{eventCity}").permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }

@@ -72,5 +72,15 @@ public class EventServiceImpl implements EventService {
 
     }
 
+    @Override
+    public List<String> getAllEventCities() {
+        return this.eventRepository.getAllEventCities();
+    }
+
+    @Override
+    public List<Event> getAllEventsForCity(String eventCity) {
+        return this.eventRepository.getAllByEventCity(eventCity);
+    }
+
 
 }

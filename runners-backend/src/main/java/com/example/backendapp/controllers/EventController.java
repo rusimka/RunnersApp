@@ -55,4 +55,14 @@ public class EventController {
     public void deleteEvent(@PathVariable Long eventId) {
         this.eventService.deleteEvent(eventId);
     }
+
+    @GetMapping("cities")
+    public List<String> getAllEventCities() {
+        return this.eventService.getAllEventCities();
+    }
+
+    @GetMapping("/getAllEventsForCity/{eventCity}")
+    public List<Event> getAllEventsForCity(@PathVariable String eventCity) {
+        return this.eventService.getAllEventsForCity(eventCity);
+    }
 }

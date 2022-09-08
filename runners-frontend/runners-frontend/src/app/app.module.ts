@@ -31,6 +31,9 @@ import { EventListComponent } from './components/event-list/event-list.component
 import {MatCardModule} from "@angular/material/card";
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -47,7 +50,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     AddEventComponent,
     UploadPhotoComponent,
     EventListComponent,
-    UpdateEventComponent
+    UpdateEventComponent,
+    SearchBoxComponent
   ],
     imports: [
         BrowserModule,
@@ -66,7 +70,9 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFireStorageModule,
         MatCardModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatAutocompleteModule,
+        Ng2SearchPipeModule
 
     ],
   providers: [authInterceptorProviders],

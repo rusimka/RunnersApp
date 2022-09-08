@@ -18,4 +18,9 @@ public interface EventService {
     Event updateEvent(Long eventId, Event event);
 
     void deleteEvent(Long eventId);
+
+    List<String> getAllEventCities();
+
+    List<Event> getAllEventsForCity(String eventCity);
+
 }
