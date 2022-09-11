@@ -13,7 +13,10 @@ export class EventListComponent implements OnInit {
   events: Event[] = [];
   cities: string[] = [];
   searchText!: string;
+  ifCityExist: boolean = false;
 
+  cityNotFound!: string;
+  eventInCityNotExistMessage!: boolean;
 
 
 
@@ -35,15 +38,38 @@ export class EventListComponent implements OnInit {
 
 
   searchByCity(searchText: string) {
-    if (searchText.length == 0) {
+    this.ifCityExist = true; // we assume that search text is in the cities list
+    this.eventInCityNotExistMessage = false; // this error message will only be shown if it's true
+
+    if (searchText.length == 0) { // if we delete something in the search input
       this.eventService.getAllEvents().subscribe(data => {
         this.events = data;
         console.log(this.events);
       });
     }
-    this.eventService.getAllEventsForCity(searchText).subscribe((data: any) => {
-      this.events = data;
-    });
+
+
+    else {
+      for (let i = 0; i < this.cities.length; i++) {
+        if (this.cities[i].toLowerCase() == searchText) { // if the city already exist
+          this.ifCityExist = true;
+          break;
+        } else
+          this.ifCityExist = false;
+          this.eventInCityNotExistMessage = false;
+      }
+
+      if (this.ifCityExist == false) {
+        console.log("Events in this city do not exist");
+        this.eventInCityNotExistMessage = true;
+      } else {
+        this.eventService.getAllEventsForCity(searchText).subscribe((data: any) => {
+          this.events = data;
+
+        });
+      }
+
+    }
 
   }
 }

@@ -10,7 +10,7 @@
 
   <div class="threeGrid">
     <div *ngFor="let event of events"   >
-      <div>
+      <div *ngIf="!eventInCityNotExistMessage">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title>{{event.eventName}}</mat-card-title>
@@ -27,12 +27,17 @@
         </mat-card>
       </div>
 
+
+
       </div>
 
+  </div>
+
+<div *ngIf="eventInCityNotExistMessage">
+  <p>There are no events in this city yet.</p>
+</div>
 
 
-
-    </div>
 
 
 
