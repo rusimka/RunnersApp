@@ -14,19 +14,20 @@ import {EventListComponent} from "./components/event-list/event-list.component";
 import {UpdateEventComponent} from "./components/update-event/update-event.component";
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'home', component: HomeComponent }, // all public -- this should containt information about the page
+  { path: 'login', component: LoginComponent }, // all public
+  { path: 'register', component: RegisterComponent }, // all public
   { path: 'profile', component: ProfileComponent },
-  { path: 'user', component: BoardUserComponent },
-  { path: 'mod', component: BoardModeratorComponent },
-  { path: 'admin', component: BoardAdminComponent },
+  // access to this endpoint should have all logged moderator user to see their events added
+  { path: 'user', component: BoardUserComponent }, // delete this endpoint
+  { path: 'mod', component: BoardModeratorComponent }, // delete this
+  { path: 'admin', component: BoardAdminComponent }, // delete this
   { path: '', redirectTo: 'home', pathMatch: 'full'}, // this will redirect to home component
-  { path : 'add-moderator', component: AddModeratorComponent },
-  { path: 'add-event', component: AddEventComponent },
-  { path : 'upload-photo', component: UploadPhotoComponent },
-  { path: 'events', component: EventListComponent},
-  { path: 'update-event/:eventId', component: UpdateEventComponent}
+  { path : 'add-moderator', component: AddModeratorComponent }, // only admin
+  { path: 'add-event', component: AddEventComponent }, // admin and moderator
+  { path : 'upload-photo', component: UploadPhotoComponent }, // delete
+  { path: 'events', component: EventListComponent}, // all users
+  { path: 'update-event/:eventId', component: UpdateEventComponent} // admin and moderator 
 ];
 
 @NgModule({
