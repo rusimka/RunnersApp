@@ -13,13 +13,13 @@ export class AppComponent {
 
   private roles: string[] = [];
   isLoggedIn = false;
-  showAdminBoard = false;
-  showModeratorBoard = false;
+
   username?: string;
 
   showUsersBoard = false;
   showAddEventBoard = false;
   showEventsBoard = false;
+  showProfileBoard = false;
 
   constructor(private tokenStorageService: TokenStorageService) {}
 
@@ -32,17 +32,17 @@ export class AppComponent {
       this.showUsersBoard = this.roles.includes('ROLE_ADMIN');
         if (this.roles.includes("ROLE_ADMIN") || this.roles.includes("ROLE_MODERATOR")) {
           this.showAddEventBoard = true;
+          this.showProfileBoard = true;
+
         }
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
       this.username = user.username;
     }
   }
 
   logout(): void {
     this.tokenStorageService.signOut();
-    this.isLoggedIn = false;
-    this.showEventsBoard = false;
+    // this.isLoggedIn = false;
+    // this.showEventsBoard = false;
     window.location.reload();
   }
 

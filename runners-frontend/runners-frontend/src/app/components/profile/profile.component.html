@@ -10,7 +10,7 @@
       <img mat-card-image src="{{event.eventPhotoUrl}}" alt="Photo of a Shiba Inu">
       <mat-card-content>
         <p>Event city: <b>{{event.eventCity}}</b></p>
-        <p>Event country: <b>{{event.eventCity}}</b></p>
+        <p>Event country: <b>{{event.eventCountry}}</b></p>
         <p>Event date: <b>{{event.eventDate.toString().substring(0,10)}}</b></p>
       </mat-card-content>
       <button mat-raised-button color="primary" class="buttons" (click)="updateEvent(event.eventId)">Edit</button>

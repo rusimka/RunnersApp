@@ -7,9 +7,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { BoardAdminComponent } from './components/board-admin/board-admin.component';
-import { BoardModeratorComponent } from './components/board-moderator/board-moderator.component';
-import { BoardUserComponent } from './components/board-user/board-user.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {authInterceptorProviders} from './helpers/auth.interceptor';
@@ -23,7 +20,6 @@ import { AddEventComponent } from './components/add-event/add-event.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
@@ -32,7 +28,6 @@ import {MatCardModule} from "@angular/material/card";
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
-import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
@@ -43,15 +38,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
-    BoardAdminComponent,
-    BoardModeratorComponent,
-    BoardUserComponent,
     AddModeratorComponent,
     AddEventComponent,
-    UploadPhotoComponent,
     EventListComponent,
     UpdateEventComponent,
-    SearchBoxComponent
   ],
     imports: [
         BrowserModule,

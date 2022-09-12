@@ -3,14 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="search events for city.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/runners-backend/src/main/java/com/example/backendapp/security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/add-event/add-event.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/add-event/add-event.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/token-storage/token-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/token-storage/token-storage.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-admin/board-admin.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-admin/board-admin.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-admin/board-admin.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-admin/board-admin.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-moderator/board-moderator.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-moderator/board-moderator.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-moderator/board-moderator.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-moderator/board-moderator.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-user/board-user.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-user/board-user.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-user/board-user.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/board-user/board-user.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/search-box/search-box.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/search-box/search-box.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/search-box/search-box.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/search-box/search-box.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/upload-photo/upload-photo.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/upload-photo/upload-photo.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/upload-photo/upload-photo.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/upload-photo/upload-photo.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/user-service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/services/user-service/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +100,7 @@
       <workItem from="1662306454221" duration="796000" />
       <workItem from="1662403996049" duration="3000000" />
       <workItem from="1662567390198" duration="1543000" />
-      <workItem from="1662625672730" duration="26700000" />
+      <workItem from="1662625672730" duration="30528000" />
     </task>
     <task id="LOCAL-00001" summary="authentication and authorization on front-end added">
       <created>1655335980441</created>

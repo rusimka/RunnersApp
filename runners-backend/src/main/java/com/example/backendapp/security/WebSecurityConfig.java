@@ -62,12 +62,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/add-role-to-user/**").hasRole("ADMIN")
                 .antMatchers("/add-event").hasAnyRole("ADMIN", "MODERATOR")
                 .antMatchers("/events").authenticated()
-                .antMatchers("/events/{userId}").permitAll()
-                .antMatchers("/getEvent/{eventId}").permitAll()
-                .antMatchers("/update-event/{eventId}").permitAll()
-                .antMatchers("/delete-event/{eventId}").permitAll()
-                .antMatchers("/cities").permitAll()
-                .antMatchers("/getAllEventsForCity/{eventCity}").permitAll()
+                .antMatchers("/events/{userId}").hasAnyRole("ADMIN", "MODERATOR")
+                .antMatchers("/getEvent/{eventId}").hasAnyRole("ADMIN", "MODERATOR")
+                .antMatchers("/update-event/{eventId}").hasAnyRole("ADMIN", "MODERATOR")
+                .antMatchers("/delete-event/{eventId}").hasAnyRole("ADMIN", "MODERATOR")
+                .antMatchers("/cities").authenticated()
+                .antMatchers("/getAllEventsForCity/{eventCity}").authenticated()
                 .anyRequest().authenticated();
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
