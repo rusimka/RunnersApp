@@ -13,6 +13,7 @@ import {Router} from "@angular/router";
 
 /*
 This Component gets current User from Storage using TokenStorageService and show information (username, token, email, roles).
+This Component will only be shown for users that are moderators to see their events added on this page
  */
 export class ProfileComponent implements OnInit {
 

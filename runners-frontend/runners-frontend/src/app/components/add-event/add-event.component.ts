@@ -8,6 +8,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {UploadTaskSnapshot} from "@angular/fire/compat/storage/interfaces";
 import {finalize, Observable} from "rxjs";
 import {TokenStorageService} from "../../services/token-storage/token-storage.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -33,7 +34,8 @@ export class AddEventComponent implements OnInit {
   constructor(private eventService: EventService,
               private angularFireStorage : AngularFireStorage,
               private snackBar: MatSnackBar,
-              private tokenStorageService: TokenStorageService) { }
+              private tokenStorageService: TokenStorageService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.currentUser = this.tokenStorageService.getUser();
@@ -56,7 +58,8 @@ export class AddEventComponent implements OnInit {
       this.successMessage = data.message;
       console.log(this.successMessage)
       this.openSnackBar(this.successMessage);
-      this.eventForm.resetForm();
+      // this.eventForm.resetForm(); we only need to navigate the user in events page
+      this.router.navigate(["events"]) // is this okay or we should go with the upper approach
     });
 
   }

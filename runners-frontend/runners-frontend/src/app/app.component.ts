@@ -17,13 +17,22 @@ export class AppComponent {
   showModeratorBoard = false;
   username?: string;
 
+  showUsersBoard = false;
+  showAddEventBoard = false;
+  showEventsBoard = false;
+
   constructor(private tokenStorageService: TokenStorageService) {}
 
     ngOnInit(): void {
-      this.isLoggedIn = !!this.tokenStorageService.getUser();
-      if (this.isLoggedIn) {
+      this.isLoggedIn = this.tokenStorageService.getUser();
+      if (this.isLoggedIn) { // what to show on the logged user
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
+      this.showEventsBoard = true;
+      this.showUsersBoard = this.roles.includes('ROLE_ADMIN');
+        if (this.roles.includes("ROLE_ADMIN") || this.roles.includes("ROLE_MODERATOR")) {
+          this.showAddEventBoard = true;
+        }
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
       this.username = user.username;
@@ -32,6 +41,8 @@ export class AppComponent {
 
   logout(): void {
     this.tokenStorageService.signOut();
+    this.isLoggedIn = false;
+    this.showEventsBoard = false;
     window.location.reload();
   }
 

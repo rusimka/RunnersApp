@@ -22,9 +22,9 @@ public class UserController {
     @GetMapping("/users")
     public List<User> getAllUsers() {
         return this.userService.findAllUsers();
-    }
+    } // this is to get and show all users
 
-    @PutMapping("/add-role-to-user/{userId}")
+    @PutMapping("/add-role-to-user/{userId}") // this is put request to add role to user
     public ResponseEntity<?> addRoleToUser(@PathVariable Long userId) {
         this.userService.addRoleToUser(userId);
         return ResponseEntity.ok(new MessageResponse("ROLE_MODERATOR successfully added to user!"));

@@ -11,6 +11,18 @@
         <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
       </li>
 
+      <li class="nav-item active" *ngIf="showEventsBoard">
+        <a href="/events" class="nav-link" routerLink="events">Events</a>
+      </li>
+
+      <li class="nav-item active" *ngIf="showUsersBoard">
+        <a href="/add-moderator" class="nav-link" routerLink="add-moderator">Users</a>
+      </li>
+
+      <li class="nav-item active" *ngIf="showAddEventBoard">
+        <a href="/add-event" class="nav-link" routerLink="add-event">Add event</a>
+      </li>
+
       <li class="nav-item active">
         <a href="/address" class="nav-link" *ngIf="isLoggedIn" routerLink="address">Address</a>
       </li>

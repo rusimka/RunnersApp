@@ -26,8 +26,8 @@ const routes: Routes = [
   { path : 'add-moderator', component: AddModeratorComponent }, // only admin
   { path: 'add-event', component: AddEventComponent }, // admin and moderator
   { path : 'upload-photo', component: UploadPhotoComponent }, // delete
-  { path: 'events', component: EventListComponent}, // all users
-  { path: 'update-event/:eventId', component: UpdateEventComponent} // admin and moderator 
+  { path: 'events', component: EventListComponent}, // all registered and logged users
+  { path: 'update-event/:eventId', component: UpdateEventComponent} // admin and moderator
 ];
 
 @NgModule({
