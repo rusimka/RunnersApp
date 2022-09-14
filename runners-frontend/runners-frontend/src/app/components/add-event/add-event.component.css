@@ -5,3 +5,7 @@
 .container {
   position : relative;
 }
+
+.button-color {
+  background: #F8BBA6;
+}

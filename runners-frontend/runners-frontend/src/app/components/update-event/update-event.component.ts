@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {EventService} from "../../services/event-service/event.service";
 import {Event} from "../../models/event";
 import {finalize, Observable} from "rxjs";
@@ -31,7 +31,8 @@ export class UpdateEventComponent implements OnInit {
               private eventService: EventService,
               private angularFireStorage : AngularFireStorage,
               private snackBar: MatSnackBar,
-              private tokenStorageService: TokenStorageService) { }
+              private tokenStorageService: TokenStorageService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.event = new Event();
@@ -71,7 +72,7 @@ export class UpdateEventComponent implements OnInit {
         this.successMessage = data.message;
         console.log(this.successMessage)
         this.openSnackBar(this.successMessage);
-        this.eventForm.resetForm();
+        this.router.navigate(["profile"])
       });
     } else {
       // update everything except event photo url
@@ -79,7 +80,7 @@ export class UpdateEventComponent implements OnInit {
         this.successMessage = data.message;
         console.log(this.successMessage)
         this.openSnackBar(this.successMessage);
-        this.eventForm.resetForm();
+        this.router.navigate(["profile"])
       });
     }
 

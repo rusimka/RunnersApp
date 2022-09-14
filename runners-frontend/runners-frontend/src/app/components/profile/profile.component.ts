@@ -46,4 +46,8 @@ export class ProfileComponent implements OnInit {
     })
 
   }
+
+  navigateToAddEventPage() {
+    this.router.navigate(["add-event"])
+  }
 }

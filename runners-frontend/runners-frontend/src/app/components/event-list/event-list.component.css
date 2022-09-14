@@ -26,3 +26,20 @@
   padding-bottom: 50px;
   margin:auto;
 }
+
+p{
+  color: #8A64D6
+;
+}
+
+.text-color {
+  color:#8A64D6;
+
+}
+
+.error-style
+{
+  background: #F8BBA6;
+  color: white;
+}
+

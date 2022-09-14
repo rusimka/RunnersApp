@@ -58,8 +58,7 @@ export class AddEventComponent implements OnInit {
       this.successMessage = data.message;
       console.log(this.successMessage)
       this.openSnackBar(this.successMessage);
-      // this.eventForm.resetForm(); we only need to navigate the user in events page
-      this.router.navigate(["events"]) // is this okay or we should go with the upper approach
+      this.router.navigate(["profile"])
     });
 
   }

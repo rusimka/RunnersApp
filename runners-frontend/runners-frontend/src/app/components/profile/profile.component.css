@@ -12,3 +12,23 @@
 .buttons {
   margin-right: 20px;
 }
+
+p{
+  color: #8A64D6
+;
+}
+
+.text-color {
+  color:#8A64D6;
+}
+
+.update-button {
+  background: #99A4BF;
+}
+
+.delete-button
+{
+  background: #F8BBA6;
+}
+
+

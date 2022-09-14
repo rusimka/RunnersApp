@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 
-const API_URL = 'http://localhost:8081/api/test/';
 const USERS_API_URL = 'http://localhost:8081/users';
 const UPDATE_USER_ROLE_API_URL = "http://localhost:8081/add-role-to-user"
 @Injectable({
@@ -13,9 +12,6 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getPublicContent(): Observable<any> {
-   return this.http.get(API_URL + 'all', {responseType: 'text'}) ;
-  }
 
   getAllUsers(): Observable<any> {
     return this.http.get(`${USERS_API_URL}`);

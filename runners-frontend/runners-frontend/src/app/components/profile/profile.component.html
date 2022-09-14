@@ -1,23 +1,27 @@
+<div class="row">
+  <button mat-raised-button  class="update-button" (click)="navigateToAddEventPage()">Add event </button>
+</div>
+
+<br>
 <div class="threeGrid">
 
   <div *ngFor="let event of events">
 
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>{{event.eventName}}</mat-card-title>
-        <mat-card-subtitle>{{event.eventName}}</mat-card-subtitle>
+        <mat-card-title class="text-color">{{event.eventName}}</mat-card-title>
+        <mat-card-subtitle class="text-color">{{event.eventDescription}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{event.eventPhotoUrl}}" alt="Photo of a Shiba Inu">
+      <img mat-card-image src="{{event.eventPhotoUrl}}">
       <mat-card-content>
-        <p>Event city: <b>{{event.eventCity}}</b></p>
-        <p>Event country: <b>{{event.eventCountry}}</b></p>
-        <p>Event date: <b>{{event.eventDate.toString().substring(0,10)}}</b></p>
+        <p><b>Event city: </b>{{event.eventCity}}</p>
+        <p><b>Event country: </b> {{event.eventCity}}</p>
+        <p><b>Event date: </b>{{event.eventDate.toString().substring(0,10)}}</p>
       </mat-card-content>
-      <button mat-raised-button color="primary" class="buttons" (click)="updateEvent(event.eventId)">Edit</button>
-      <button mat-raised-button color="warn" class="buttons" (click)="deleteEvent(event.eventId)">Delete</button>
-
-
+      <button mat-raised-button  class="buttons update-button" (click)="updateEvent(event.eventId)">Edit</button>
+      <button mat-raised-button  class="buttons delete-button" (click)="deleteEvent(event.eventId)">Delete</button>
     </mat-card>
+
 
   </div>
 

@@ -1,8 +1,8 @@
 <div class="row">
   <div class="search-by-city">
-    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a race by city">
   </div>
-  <button (click)="searchByCity(searchText)">Search city</button>
+  <button mat-stroked-button color="primary" (click)="searchByCity(searchText)">Search city</button>
 </div>
 
 
@@ -13,16 +13,14 @@
       <div *ngIf="!eventInCityNotExistMessage">
         <mat-card class="example-card">
           <mat-card-header>
-            <mat-card-title>{{event.eventName}}</mat-card-title>
-            <!--        <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+            <mat-card-title class="text-color">{{event.eventName}}</mat-card-title>
+            <mat-card-subtitle class="text-color">{{event.eventDescription}}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="{{event.eventPhotoUrl}}" alt="Photo of a Shiba Inu">
+          <img mat-card-image src="{{event.eventPhotoUrl}}">
           <mat-card-content>
-            <p>Event city: <b>{{event.eventCity}}</b></p>
-            <p>Event country: <b>{{event.eventCity}}</b></p>
-            <p>Event date: <b>{{event.eventDate.toString().substring(0,10)}}</b></p>
-            <p>Event description: <b>{{event.eventDescription}}</b></p>
-
+            <p><b>Event city: </b>{{event.eventCity}}</p>
+            <p><b>Event country: </b> {{event.eventCity}}</p>
+            <p><b>Event date: </b>{{event.eventDate.toString().substring(0,10)}}</p>
           </mat-card-content>
         </mat-card>
       </div>
@@ -33,8 +31,8 @@
 
   </div>
 
-<div *ngIf="eventInCityNotExistMessage">
-  <p>There are no events in this city yet.</p>
+<div *ngIf="eventInCityNotExistMessage" class="error-style">
+  <h2>There are no events in this city yet!</h2>
 </div>
 
 
