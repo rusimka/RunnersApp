@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d06cc26-71a3-4ef9-aa53-f60db19bc0d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/event-list/event-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/event-list/event-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/runners-frontend/runners-frontend/src/app/components/profile/profile.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +78,7 @@
       <workItem from="1662306454221" duration="796000" />
       <workItem from="1662403996049" duration="3000000" />
       <workItem from="1662567390198" duration="1543000" />
-      <workItem from="1662625672730" duration="52262000" />
+      <workItem from="1662625672730" duration="52912000" />
     </task>
     <task id="LOCAL-00001" summary="authentication and authorization on front-end added">
       <created>1655335980441</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663182804389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted the registration link in profile.component.html">
+      <created>1663417931408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663417931408</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="authentication and authorization on front-end added" />
     <MESSAGE value="added link for registration on the race." />
-    <option name="LAST_COMMIT_MESSAGE" value="added link for registration on the race." />
+    <MESSAGE value="deleted the registration link in profile.component.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted the registration link in profile.component.html" />
   </component>
 </project>
