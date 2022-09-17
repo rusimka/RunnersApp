@@ -17,7 +17,7 @@
         <p><b>Event city: </b>{{event.eventCity}}</p>
         <p><b>Event country: </b> {{event.eventCity}}</p>
         <p><b>Event date: </b>{{event.eventDate.toString().substring(0,10)}}</p>
-        <a href="{{event.eventRegistrationLink}}" target="_blank">Click on the link to register for the race: {{event.eventRegistrationLink}}</a>
+        <a href="{{event.eventRegistrationLink}}" target="_blank">Click on the link to register for the race</a>
       </mat-card-content>
       <button mat-raised-button  class="buttons update-button" (click)="updateEvent(event.eventId)">Edit</button>
       <button mat-raised-button  class="buttons delete-button" (click)="deleteEvent(event.eventId)">Delete</button>
